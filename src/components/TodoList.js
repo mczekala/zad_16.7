@@ -1,13 +1,17 @@
 import React from "react";
+import {
+  Todo
+} from "../components/Todo";
 export const TodoList = props =>
-  <
-  ul > {
-    props.data.map(elem => < li onClick = {
-        () => props.remove(elem.id)
-      }
-      key = {
-        elem.id
-      } > {
-        elem.text
-      } < /li>)  }< /
-      ul > ;
+  props.data.map(elem => ( <
+    Todo onClick = {
+      () => props.remove(elem.id)
+    }
+    text = {
+      elem.text
+    }
+    key = {
+      elem.id
+    }
+    />
+  ));
